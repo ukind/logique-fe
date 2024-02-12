@@ -12,8 +12,7 @@ export default function Home() {
 
   const onClickButtonSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    router.push(`/gallery?search=${query}`);
+    if (query) router.push(`/gallery?search=${query}`);
   };
 
   return (
