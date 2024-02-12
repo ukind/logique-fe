@@ -95,7 +95,7 @@ const Gallery = () => {
 
   const onClickSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    getGallery(query);
+    if (query) getGallery(query);
   };
 
   const onToggleSearchModal = () => {
